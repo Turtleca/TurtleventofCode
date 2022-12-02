@@ -1,7 +1,4 @@
-import sys
-sys.path.append("./Modules")
-
-from readFile import readInput
+from Days import readInput
 
 aFile = readInput(2)
 
