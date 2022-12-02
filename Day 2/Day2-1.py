@@ -26,9 +26,8 @@ def RPS():
     totalScore = 0
     for line in openFile:
         roundScore = 0
-        currentMove = ord(line[2]) - 87
         opponentMove = ord(line[0]) - 64
-        print(currentMove, opponentMove)
+        currentMove = ord(line[2]) - 87
         if beatenBy[opponentMove-1] == currentMove: #WIN
             roundScore = WIN + currentMove
         elif beats[opponentMove-1] == currentMove: #loos 

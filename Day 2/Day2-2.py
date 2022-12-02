@@ -5,9 +5,9 @@
 # 2 for paper B 
 # 3 for scissors C 
 
-# X Loss
-# Y Draw
-# Z Win
+# X Loss 1
+# Y Draw 2
+# Z Win 3
 
 # 0 for loss 
 # 3 for draw
@@ -21,6 +21,7 @@ WIN = 6
 NEWLINE = "\n"
 SPACE = " "
 
+normalGame = [ROCK, PAPER, SCISSORS]
 beatenBy = [PAPER, SCISSORS, ROCK]
 beats = [SCISSORS, ROCK, PAPER]
 
@@ -30,15 +31,15 @@ def RPS():
     totalScore = 0
     for line in openFile:
         roundScore = 0
-        currentMove = ord(line[2]) - 87
         opponentMove = ord(line[0]) - 64
-        print(currentMove, opponentMove)
-        if beatenBy[opponentMove-1] == currentMove: #WIN
-            roundScore = WIN + currentMove
-        elif beats[opponentMove-1] == currentMove: #loos 
-            roundScore = LOSS + currentMove
-        else: 
-            roundScore = DRAW + currentMove
+        gameState = ord(line[2]) - 87
+        myMove = 0
+        if (WIN/3)+1 == gameState: #WIN
+            roundScore = WIN + beatenBy[opponentMove-1]
+        elif (LOSS/3)+1 == gameState: #LOSS
+            roundScore = LOSS + beats[opponentMove-1]
+        else: # DRAW
+            roundScore = DRAW + opponentMove
         totalScore += roundScore
     print(totalScore)
     openFile.close()
