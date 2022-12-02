@@ -1,12 +1,24 @@
-from readFile import readInput
-from datetime import date
-import importlib
+import sys
 
-dateToday = str(date.today()).split("-")[2]
-challengeNum = 1
+import datetime
 
-fileToday = readInput(dateToday)
+def readInput(day):
+    fileName = "./Days/inputs/day%s-1.txt" %(day)
+    openFile = open(fileName, "r")
+    return(openFile)
 
-print("Today is: %s  \nstarting program ./Day %s/Day%s-%s.py " %(dateToday,dateToday,dateToday,challengeNum))
+if len(sys.argv) == 1:
+  day = datetime.datetime.now().day
+elif len(sys.argv) == 2:
+  day = int(sys.argv[1])
+else:
+  print(f"Wrong number of arguments, expected 0 or 1 arguments (optional day override), got {len(sys.argv)-1}")
+  exit(1)
 
-day = importlib.import_module("Day %s.Day%s-%s" %(dateToday,dateToday,challengeNum))
+sys.path.insert(0, "./Day {:>02}".format(str(day)))
+
+part1 = __import__("Day{:>02}-1".format(str(day)))
+part1.run(readInput(day))
+
+part2 = __import__("Day{:>02}-2".format(str(day)))
+part2.run(readInput(day))
