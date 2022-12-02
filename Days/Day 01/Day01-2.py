@@ -1,9 +1,6 @@
 NEWLINE = "\n"
 
-def caloriecount():
-    fileName = "./inputs/day1-1.txt"
-    openfile = open(fileName, "r")
-
+def caloriecount(openfile):
     elfCount = 0
     oneElf = 0
     twoElf = 0
@@ -40,5 +37,3 @@ def caloriecount():
     3) %s\t%s
     
     Total: %s""" %(oneElf,calorieone,twoElf,calorietwo,threeElf,caloriethree,calorieTOTAL))
-        
-caloriecount()

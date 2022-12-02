@@ -25,9 +25,7 @@ normalGame = [ROCK, PAPER, SCISSORS]
 beatenBy = [PAPER, SCISSORS, ROCK]
 beats = [SCISSORS, ROCK, PAPER]
 
-def RPS():
-    filename = "./inputs/day2-1.txt"
-    openFile = open(filename, "r")
+def RPS(openFile):
     totalScore = 0
     for line in openFile:
         roundScore = 0
@@ -43,5 +41,3 @@ def RPS():
         totalScore += roundScore
     print(totalScore)
     openFile.close()
-
-RPS()

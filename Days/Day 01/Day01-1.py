@@ -2,10 +2,7 @@
 
 NEWLINE = "\n"
 
-def openFile():
-    fileName = "./inputs/day1-1.txt"
-    openfile = open(fileName, "r")
-
+def day1(openfile):
     elfCount = 0
     bestElf = 0
     elfTotal = 0
@@ -23,5 +20,3 @@ def openFile():
             elfTotal = 0
     openfile.close
     print("Best elf is %s with a count of %s calories" %(bestElf,calorieMax))
-        
-openFile()
