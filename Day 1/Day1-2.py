@@ -1,7 +1,7 @@
 NEWLINE = "\n"
 
 def caloriecount():
-    fileName = "C:/Users/sleep/OneDrive/Documents/PythonPrograms/ADventofCode/inputs/day1-1.txt"
+    fileName = "./inputs/day1-1.txt"
     openfile = open(fileName, "r")
 
     elfCount = 0

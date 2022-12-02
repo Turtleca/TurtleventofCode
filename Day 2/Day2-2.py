@@ -1,9 +1,13 @@
 # WIN AT ROCK PAPER SCISSORS
 
 #Point scores are
-# 1 for Rock A X
-# 2 for paper B Y
-# 3 for scissors C Z
+# 1 for Rock A 
+# 2 for paper B 
+# 3 for scissors C 
+
+# X Loss
+# Y Draw
+# Z Win
 
 # 0 for loss 
 # 3 for draw
@@ -37,8 +41,6 @@ def RPS():
             roundScore = DRAW + currentMove
         totalScore += roundScore
     print(totalScore)
-
-        
-        
+    openFile.close()
 
 RPS()
