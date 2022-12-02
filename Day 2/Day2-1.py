@@ -25,7 +25,7 @@ def RPS():
     SCISSORS = "C","Z"
 
     for line in openFile:
-
+        print(line)
     print(totalScore)
 
         
