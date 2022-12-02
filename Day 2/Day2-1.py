@@ -8,7 +8,12 @@
 # 0 for loss 
 # 3 for draw
 # 6 for win
-
+ROCK = "A","X"
+PAPER = "B","Y"
+SCISSORS = "C","Z"
+LOSS = 0
+DRAW = 3
+WIN = 6
 NEWLINE = "\n"
 SPACE = " "
 
@@ -17,12 +22,8 @@ def RPS():
     openFile = open(filename, "r")
 
     totalScore = 0
-    LOSS = 0
-    DRAW = 3
-    WIN = 6
-    ROCK = "A","X"
-    PAPER = "B","Y"
-    SCISSORS = "C","Z"
+
+
 
     for line in openFile:
         print(line)
