@@ -35,6 +35,7 @@ def RPS():
         else: 
             roundScore = DRAW + currentMove
         totalScore += roundScore
+    openFile.close()
     print(totalScore)
 
         

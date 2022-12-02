@@ -32,6 +32,7 @@ def caloriecount():
                 caloriethree = elfTotal
                 threeElf = elfCount
             elfTotal = 0
+    openfile.close()
     calorieTOTAL = calorieone + calorietwo + caloriethree
     print("""Rankings of elves to calories
     1) %s\t%s

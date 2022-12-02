@@ -21,6 +21,7 @@ def openFile():
                 calorieMax = elfTotal
                 bestElf = elfCount
             elfTotal = 0
+    openfile.close
     print("Best elf is %s with a count of %s calories" %(bestElf,calorieMax))
         
 openFile()
