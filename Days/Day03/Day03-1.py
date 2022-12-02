@@ -1,2 +1,3 @@
 def run(openFile):
-    fuck
+    for line in openFile:
+        print("lol", "lmao")
