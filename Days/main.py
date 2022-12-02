@@ -15,7 +15,7 @@ else:
   print(f"Wrong number of arguments, expected 0 or 1 arguments (optional day override), got {len(sys.argv)-1}")
   exit(1)
 
-sys.path.insert(0, "./Day{:>02}".format(str(day)))
+sys.path.insert(0, ".\Day{:>02}".format(str(day)))
 
 part1 = __import__("Day{:>02}-1".format(str(day)))
 part1.run(readInput(day))
