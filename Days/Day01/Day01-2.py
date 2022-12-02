@@ -1,6 +1,6 @@
 NEWLINE = "\n"
 
-def caloriecount(openfile):
+def run(openfile):
     elfCount = 0
     oneElf = 0
     twoElf = 0

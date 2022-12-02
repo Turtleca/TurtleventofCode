@@ -2,7 +2,7 @@
 
 NEWLINE = "\n"
 
-def day1(openfile):
+def run(openfile):
     elfCount = 0
     bestElf = 0
     elfTotal = 0

@@ -25,7 +25,7 @@ normalGame = [ROCK, PAPER, SCISSORS]
 beatenBy = [PAPER, SCISSORS, ROCK]
 beats = [SCISSORS, ROCK, PAPER]
 
-def RPS(openFile):
+def run(openFile):
     totalScore = 0
     for line in openFile:
         roundScore = 0
