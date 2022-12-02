@@ -24,9 +24,10 @@ def RPS():
     totalScore = 0
 
 
-
     for line in openFile:
-        print(line)
+        currentMove = ord(line[0]) - 65
+        opponentMove = ord(line[2]) - 88
+        
     print(totalScore)
 
         
