@@ -2,3 +2,4 @@ ADventofCode.code-workspace
 
 *.txt
 *.json
+*.pyc
