@@ -8,7 +8,18 @@ import datetime
 # Takes the day to append to the input file
 def readInput(day):
     fileName = "./inputs/day{:>02}-1.txt".format(str(day))
-    openFile = open(fileName, "r")
+    try:#try to open file
+      openFile = open(fileName, "r")
+    except FileNotFoundError:
+      print("Attempting to create new input data file for today")
+      try:
+        openFile = open(fileName, "x")
+      except:
+        print("Failed, something is stopping creation")
+      else:
+        print(f"File created at {fileName}!")
+        openFile = open(fileName, "r")
+
     return(openFile)
 #returns the python read file to be for looped through
 
@@ -31,7 +42,7 @@ sys.path.insert(0, ".\Day{:>02}".format(str(day)))
 # imputs the read file of the day as the only argument
 try:
   part1 = __import__("Day{:>02}-1".format(str(day)))
-except:
+except ImportError:
   print("**FAIL** No such file found")
 else:
   part1.run(readInput(day))
@@ -39,7 +50,7 @@ else:
 #Same as above except assumes part 2 is available
 try:
   part2 = __import__("Day{:>02}-2".format(str(day)))
-except:
+except ImportError:
   print("**FAIL** No such file found")  
 else:
   part2.run(readInput(day))
