@@ -43,7 +43,7 @@ sys.path.insert(0, ".\Day{:>02}".format(str(day)))
 try:
   part1 = __import__("Day{:>02}-1".format(str(day)))
 except ImportError:
-  print("**FAIL** No such file found")
+  print("**FAIL** No problem 1 file found")
 else:
   part1.run(readInput(day))
 
@@ -51,6 +51,6 @@ else:
 try:
   part2 = __import__("Day{:>02}-2".format(str(day)))
 except ImportError:
-  print("**FAIL** No such file found")  
+  print("**FAIL** No problem 2 file found")  
 else:
   part2.run(readInput(day))
