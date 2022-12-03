@@ -4,7 +4,7 @@
 # sum all up at the end
 
 # part 2 compare every 3 lines
-#TODO be able to run more than one line or at ;east remember every 3
+#TODO be able to run more than one line or at least remember every 3
 
 def run(openFile):
     totalScore = 0
