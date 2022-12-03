@@ -3,6 +3,7 @@
 # A-Z have 27-52
 # sum all up at the end
 
+# part 2 compare every 3 lines
 def run(openFile):
     totalScore = 0
     for line in openFile:
@@ -10,6 +11,10 @@ def run(openFile):
         line = line.strip("\n")
         length = len(line)
         lineList = [line[:length//2],line[length//2:]]
+
+        #add 2 more list cases?
+        
+
         lineChecked = False
         
         #Now to check for the same character in a string
