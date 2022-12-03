@@ -19,7 +19,7 @@ def run(openFile):
 
         #Now to check for the same character in a string
         if (len(sackList) == 3):
-            print(f"appended {sackList}") #debug
+            #print(f"appended {sackList}") #debug
 
             #Check ALL THE CHARACTERS
             lineChecked = False
