@@ -5,24 +5,33 @@
 
 # part 2 compare every 3 lines
 #TODO be able to run more than one line or at least remember every 3
+# try the append case and check if the lenght of the list is == 6
+#wait I dont gotta check every line individually
 
 def run(openFile):
     totalScore = 0
+    sackList = []
     for line in openFile:
-        #parse the line and split into 2 equal sections
+        #remove the newline character
         line = line.strip("\n")
-        length = len(line)
-        lineList = [line[:length//2],line[length//2:]]
-        lineChecked = False
+        #append current list to the group
+        sackList.append(line)
+
         #Now to check for the same character in a string
-        for char1 in lineList[0]:
-            for char2 in lineList[1]:
-                if char1 == char2 and lineChecked == False:
-                    if ord(char1) < 97:
-                        totalScore += (ord(char1) - 38)
-                    else:
-                        totalScore += (ord(char1) - 96)
-                    lineChecked = True
-        lineCounted += 1
+        if (len(sackList) == 3):
+            print(f"appended {sackList}") #debug
+
+            #Check ALL THE CHARACTERS
+            lineChecked = False
+            for char1 in sackList[0]:
+                for char2 in sackList[1]:
+                    for char3 in sackList[2]:
+                        if (char1 == char2 == char3) and lineChecked == False:
+                            if ord(char1) < 97:
+                                totalScore += (ord(char1) - 38)
+                            else:
+                                totalScore += (ord(char1) - 96)
+                            lineChecked = True
+            sackList = []
     openFile.close()
-    print(f"the total score for part 1 is {totalScore}")
+    print(f"the total score for part 2 is {totalScore}")
