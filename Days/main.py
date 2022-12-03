@@ -33,5 +33,5 @@ part1 = __import__("Day{:>02}-1".format(str(day)))
 part1.run(readInput(day))
 
 #Same as above except assumes part 2 is available
-part2 = __import__("Day{:>02}-2".format(str(day)))
-part2.run(readInput(day))
+#part2 = __import__("Day{:>02}-2".format(str(day)))
+#part2.run(readInput(day))
