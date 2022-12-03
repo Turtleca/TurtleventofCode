@@ -3,7 +3,6 @@
 import sys
 
 import datetime
-
 #readInput()
 # Takes the day to append to the input file
 def readInput(day):
@@ -27,7 +26,8 @@ def readInput(day):
 # If there is only 1 just uses the current date to append the day
 # If 2 uses that argument as the Day counter
 if len(sys.argv) == 1:
-  day = datetime.datetime.now().day
+  eastern_timezone = datetime.timezone(datetime.timedelta(hours=-5))
+  day = datetime.datetime.now(eastern_timezone).day
 elif len(sys.argv) == 2:
   day = int(sys.argv[1])
 else:
