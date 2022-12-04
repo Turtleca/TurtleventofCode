@@ -1,8 +1,8 @@
 # Main file for AoC For Turtle.ca
 # gets date and runs the current day's challenge file with it's input
 import sys
-
 import datetime
+import time
 #readInput()
 # Takes the day to append to the input file
 def readInput(day):
@@ -38,6 +38,8 @@ else:
 # appends the system path to properly look at all possible files that could be read
 sys.path.insert(0, ".\Day{:>02}".format(str(day)))
 
+print(f"Today is day {day}, attempting to open Today's files")
+
 # Import the first part of the day's advent challenge as "run()"
 # imputs the read file of the day as the only argument
 try:
@@ -48,7 +50,10 @@ except ImportError:
 except:
   print("**FAIL** other issue, try checking the problem 1?")
 else:
+  tic = time.perf_counter()
   part1.run(readInput(day))
+  toc = time.perf_counter()
+  print(f"Problem 1 took {toc - tic} seconds")
 
 #Same as above except assumes part 2 is available
 try:
@@ -59,4 +64,7 @@ except ImportError:
 except:
   print("**FAIL** other issue, try checking the problem 2?")
 else:
+  tic = time.perf_counter()
   part2.run(readInput(day))
+  toc = time.perf_counter()
+  print(f"Problem 2 took {toc - tic} seconds")
