@@ -41,16 +41,22 @@ sys.path.insert(0, ".\Day{:>02}".format(str(day)))
 # Import the first part of the day's advent challenge as "run()"
 # imputs the read file of the day as the only argument
 try:
+  print("Loading Day{:>02}-1".format(str(day)))
   part1 = __import__("Day{:>02}-1".format(str(day)))
 except ImportError:
   print("**FAIL** No problem 1 file found")
+except:
+  print("**FAIL** other issue, try checking the problem 1?")
 else:
   part1.run(readInput(day))
 
 #Same as above except assumes part 2 is available
 try:
+  print("Loading Day{:>02}-2".format(str(day)))
   part2 = __import__("Day{:>02}-2".format(str(day)))
 except ImportError:
   print("**FAIL** No problem 2 file found")  
+except:
+  print("**FAIL** other issue, try checking the problem 2?")
 else:
   part2.run(readInput(day))
