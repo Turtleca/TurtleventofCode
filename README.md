@@ -2,3 +2,5 @@
 link to the challenge page: https://adventofcode.com/2022/about 
 
 Big thanks to Eric Wastl for hosting this and creating a great challenge!
+
+*ARCHIVED*
